@@ -4,11 +4,20 @@
 #include <cpctelera.h>
 #include "constants.h"
 
-u8* video_getBackBufferPtr();
-void video_initBuffers();
-void video_switchBuffers();
-void video_resetScreenPtr();
-bool video_isInsideViewport(u8 screen_x, u8 screen_y, u8 entity_x, u8 entity_y, u8 entity_width, u8 entity_height);
-u16 pixel_to_tile(u8 x, u8 y);
+extern u8* video_buffer;
+
+
+extern u8 offset_x;
+extern u8 offset_y;
+extern u8 viewport_x;
+extern u8 viewport_y;
+
+extern const u8 width_map;
+extern const u8 height_map;
+
+extern void video_initBuffers();
+extern void video_switchBuffers();
+extern void video_resetScreenPtr();
+bool video_isInsideViewport(u8, u8, u8, u8);
 
 #endif

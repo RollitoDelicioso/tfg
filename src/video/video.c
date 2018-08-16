@@ -1,10 +1,19 @@
-/*// Required Include files
+// Required Include files
 #include "video/video.h"
-#include "tilemap/map1.h"
 
 // Global variable pointing to the present memory used as back buffer
 // (Changes on every call to switchBuffers).
 u8* video_buffer;
+
+u8 offset_x;
+u8 offset_y;
+u8 viewport_x;
+u8 viewport_y;
+
+const u8 width_map;
+const u8 height_map;
+
+
 
 ////////////////////////////////////////////////////////////////////////////////////
 // GET BACK BUFFER POINTER
@@ -13,7 +22,6 @@ u8* video_buffer;
 // until a call to switchBuffers is performed.
 //
 u8* video_getBackBufferPtr(){
-
     return video_buffer;
 }
 
@@ -48,49 +56,29 @@ void video_switchBuffers(){
 // Ensures initial conditions for both video buffers to be used.
 //
 void video_initBuffers(){
-
     // Hardware backbuffer has to be cleared as it usually has code in it that
     // would be displayed as coloured pixels if not set to 0.
+    video_switchBuffers();
+    cpct_memset(CPCT_VMEM_START, 240, 0x4000);  // 16K HW_BACKBUFFER set to 0
+    video_switchBuffers();
     cpct_memset(HW_BACKBUFFER, 240, 0x4000);  // 16K HW_BACKBUFFER set to 0
     // First call to video Switch Buffers will initialize video_buffer global
     // variable containing a pointer to the current hardware backbuffer.
     // This call will also set CRTC registers that will left video_buffer 
     // undisplayed and the other buffer displayed.
-    video_switchBuffers();
 }
 
 void video_resetScreenPtr(){
-
     cpct_setVideoMemoryPage(cpct_pageC0);
     video_buffer = HW_BACKBUFFER;
 }
 
-bool video_isInsideViewport(u8 screen_x, u8 screen_y, u8 entity_x, u8 entity_y, u8 entity_width, u8 entity_height){
-
-    if (entity_x >= screen_x && entity_x + entity_width <= screen_x + VIEWPORT_WB){
-
-        if (entity_y >= screen_y && entity_y + entity_height <= screen_y + VIEWPORT_HP){
+bool video_isInsideViewport(u8 entity_x, u8 entity_y, u8 entity_width, u8 entity_height){
+    if (entity_x >= viewport_x && entity_x + entity_width <= viewport_x + VIEWPORT_WIDTH){
+        if (entity_y >= viewport_y + SCREEN_HEIGHT-VIEWPORT_HEIGHT && entity_y + entity_height <= viewport_y + VIEWPORT_HEIGHT + SCREEN_HEIGHT-VIEWPORT_HEIGHT){
 
             return true;
         }
     }
-
     return false;
 }
-
-u16 pixel_to_tile(u8 x, u8 y){
-
-    u16 resultado;
-
-    // Convert x from byte-position to pixel-position
-    x = x * NUMBER_OF_PIXELS_PER_BYTE;
-
-    // Convert from pixel-position to tile-position
-    x = x / TILE_WP;
-    y = y / TILE_HP;
-
-    // Return position in the tilemap array
-    resultado = y * g_building_W + x;
-
-    return resultado;
-}*/

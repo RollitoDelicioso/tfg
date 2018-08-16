@@ -25,7 +25,7 @@
 
 ## Example firmware palette definition as variable in cpct_img2tileset format
 
-# PALETTE={0 1 3 4 7 9 10 12 13 16 19 20 21 24 25 26}
+PALETTE={24 0 26 3 6 9 10 12 11 22 15 14 16 23 4 13}
 
 ## AUTOMATED IMAGE CONVERSION EXAMPLE (Uncomment EVAL line to use)
 ##
@@ -77,3 +77,107 @@
 ##  have mask and/or tileset, you may omit parameter (7) leaving it empty ##
 ##     $(eval $(call IMG2SPRITES,imgs/1.png,0,g,4,8,$(PAL),,src/))        ##
 ############################################################################
+
+## TILESET ###########################################################################################
+
+$(eval $(call IMG2SPRITES,img/tiles.png,0,tileset,8,8,$(PALETTE),zgtiles,src/tilemap/,hwpalette,))
+
+
+## HERO ##############################################################################################
+
+## Hero sprites
+$(eval $(call IMG2SPRITES,img/Hero/hero_front_1.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Hero/hero_front_2.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Hero/hero_back_1.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Hero/hero_back_2.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Hero/hero_left_1.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Hero/hero_left_2.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Hero/hero_right_1.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Hero/hero_right_2.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+
+## Attacking
+$(eval $(call IMG2SPRITES,img/Hero/hero_attack_front.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Hero/hero_attack_left.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Hero/hero_attack_right.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Hero/hero_attack_back.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+
+## Attack Sprite
+$(eval $(call IMG2SPRITES,img/Sword/sword_down_1.png,0,sprite,4,8,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Sword/sword_down_2.png,0,sprite,8,8,$(PALETTE),mask,src/sprites,))
+
+$(eval $(call IMG2SPRITES,img/Sword/sword_up_1.png,0,sprite,4,8,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Sword/sword_up_2.png,0,sprite,8,8,$(PALETTE),mask,src/sprites,))
+
+$(eval $(call IMG2SPRITES,img/Sword/sword_left_1.png,0,sprite,6,6,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Sword/sword_left_2.png,0,sprite,6,14,$(PALETTE),mask,src/sprites,))
+
+$(eval $(call IMG2SPRITES,img/Sword/sword_right_1.png,0,sprite,6,6,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Sword/sword_right_2.png,0,sprite,6,14,$(PALETTE),mask,src/sprites,))
+
+#######################################################################################################
+
+## ENEMIES ############################################################################################
+
+## DUCK
+
+$(eval $(call IMG2SPRITES,img/Enemies/Duck/duck_back_1.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Enemies/Duck/duck_back_2.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Enemies/Duck/duck_front_1.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Enemies/Duck/duck_front_2.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Enemies/Duck/duck_left_1.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Enemies/Duck/duck_left_2.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Enemies/Duck/duck_right_1.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Enemies/Duck/duck_right_2.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+
+## GIRADOR
+
+$(eval $(call IMG2SPRITES,img/Enemies/Girador/girador_1.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Enemies/Girador/girador_2.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+
+## GUSANO
+
+$(eval $(call IMG2SPRITES,img/Enemies/Gusano/gusano_out.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Enemies/Gusano/gusano_hidding_1.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Enemies/Gusano/gusano_hidding_2.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Enemies/Gusano/gusano_moving_to_hero.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+
+## DISPARADOR
+
+$(eval $(call IMG2SPRITES,img/Enemies/Disparador/disparador_back.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Enemies/Disparador/disparador_front.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Enemies/Disparador/disparador_front_a.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Enemies/Disparador/disparador_left.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Enemies/Disparador/disparador_left_a.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Enemies/Disparador/disparador_right.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Enemies/Disparador/disparador_right_a.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Enemies/Disparador/disparador_bullet.png,0,sprite,2,4,$(PALETTE),mask,src/sprites,))
+
+
+#######################################################################################################
+
+
+## OBJECTS ############################################################################################
+
+## Hearth
+
+$(eval $(call IMG2SPRITES,img/Objects/Hearth/full_hearth.png,0,sprite,8,8,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Objects/Hearth/half_hearth.png,0,sprite,8,8,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Objects/Hearth/empty_hearth.png,0,sprite,8,8,$(PALETTE),mask,src/sprites,))
+
+## Key
+
+$(eval $(call IMG2SPRITES,img/Objects/Key/white_key.png,0,sprite,4,8,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Objects/Key/green_key.png,0,sprite,4,8,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Objects/Key/red_key.png,0,sprite,4,8,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Objects/Key/blue_key.png,0,sprite,4,8,$(PALETTE),mask,src/sprites,))
+
+#######################################################################################################
+
+## Door
+
+$(eval $(call IMG2SPRITES,img/Objects/Doors/white_door.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Objects/Doors/green_door.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Objects/Doors/red_door.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+$(eval $(call IMG2SPRITES,img/Objects/Doors/blue_door.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+
+#######################################################################################################

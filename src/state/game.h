@@ -3,9 +3,10 @@
 
 
 #include <cpctelera.h>
+#include "constants.h"
 
 
-void sort_enemies(void);
+//void sort_enemies(void);
 void run_game();
 
 extern u8 run;

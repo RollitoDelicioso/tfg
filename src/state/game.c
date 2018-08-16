@@ -1,54 +1,73 @@
 #include "game.h"
 #include "entities/enemy.h"
 #include "entities/hero.h"
-#include "constants.h"
+#include "entities/object.h"
+#include "entities/bullet.h"
+#include "entities/door.h"
+#include "map/map.h"
+#include "video/video.h"
+#include "video/camera.h"
+#include "video/ui.h"
 
-u8 run = false;
 u8 update_index = 0;
-//Using InsertionSort
 
+void initialize_all()
+{
+	video_initBuffers();
+	
+   	ui_init(CPCT_VMEM_START);
+   	ui_init(HW_BACKBUFFER);
 
-void sort_enemies(void){
-	u8 **array = ref_enemies;
-   	u8 i, j;
-   	u8* swap_value;
-	for (i = 1 ; i < MAX_ENEMIES; i++) {
-    	j = i;
-	    while ( j > 0 && (*array[j-1]) > (*array[j])) {
-	      swap_value = array[j];
-	      array[j] = array[j-1];
-	      array[j-1] = swap_value;
-	    }
-  	}
+   	ui_init_heal();
+	ui_init_keys();
+   	
+   	// Cambiar 3º parámetro por ancho de pantalla actual
+   	camera_set_entity(&hero.x, &hero.y);
+	enemy_draw();
+	map_init_game();
 }
 
-void update(){
-	cpct_setBorder(2);
+void update()
+{
 	hero_update();
 	enemy_update();
-	cpct_setBorder(3);
+	bullet_update();
+	camera_run();
 }
 
-void erase_and_draw(){
-	cpct_setBorder(4);
-	hero_erase_and_draw();
-	enemy_erase_and_draw();
-	cpct_setBorder(5);
+void draw()
+{
+   	// Cambiar y parámetro por ancho de pantalla actual
+	cpct_etm_drawTilemap4x8_ag(video_buffer+SCREEN_HEIGHT_OFFSET, (u8*)map + offset_y*width_map + offset_x );
+
+	draw_objects();
+	enemy_draw();
+	bullet_draw();
+	hero_draw();
+	door_draw();
+}	
+
+inline void go_next_map()
+{
+	map_load_new_map();
 }
 
 void run_game(){
+	initialize_all();
+
 	while(hero.lives){
-		while(!run);
-		erase_and_draw();
-		cpct_setBorder(6);
-		sort_enemies();
-		cpct_setBorder(7);
-		update(); 
-		cpct_setBorder(9);
-		update_index += 2;
-		if(update_index == 6){
+		draw();
+		update();
+
+		if(++update_index == MAX_ENEMIES){
 			update_index = 0;
 		}
-		run = false;
+
+		if(change_map)
+		{
+			go_next_map();
+		}
+
+		video_switchBuffers();
 	}
 }

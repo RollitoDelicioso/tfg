@@ -3,6 +3,7 @@
 
 
 #include <cpctelera.h>
+#include "constants.h"
 
 void show_menu();
 
