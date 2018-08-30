@@ -6,11 +6,17 @@
 #define girador		1
 #define gusano		2
 #define disparador	3
+#define princess 4
 
 #define up		0
 #define down	1
 #define left	2
 #define right	3
+
+#define white		0
+#define red		1
+#define green		2
+#define blue		3
 
 #define HERO_SPEED_X 1
 #define HERO_SPEED_Y 2
@@ -25,6 +31,8 @@
 #define MAX_BULLETS 6
 
 #define DISPLACEMENT_ENEMY 5
+
+#define CHECKPOINTS 7
 
 // Pointer to the second hardware screen
 #define HW_BACKBUFFER (u8*)(0x8000)
@@ -75,4 +83,8 @@
 #define CHECK_MOVE_VERTICAL(X,Y,WHO) entity_can_move(get_tile_vertical_0(X,Y),WHO) && entity_can_move(get_tile_vertical_1(X,Y),WHO)
 
 #define SCORE_FOREGROUND_COLOR 4
-#define SCORE_BACKGROUND_COLOR 5
+#define KEY_BACKGROUND_COLOR 3
+
+// COLORS
+#define MENU_FOREGROUND_COLOR 13
+#define MENU_BACKGROUND_COLOR 3

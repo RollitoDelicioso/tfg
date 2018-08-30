@@ -77,7 +77,8 @@ void enemy_drop_half_heal(u8* enemy)
 
 void enemy_generic_drop(u8* enemy)
 {
-	if(cpct_getRandom_mxor_u8() < 55) enemy_drop_half_heal(enemy);	
+	if(cpct_getRandom_mxor_u8() < 55) 
+		enemy_drop_half_heal(enemy);	
 }
 
 
@@ -322,12 +323,6 @@ inline void check_and_perform()
 
 bool can_hit_hero()
 {
-	/*enemy_walking = 0,		// 0
-   	enemy_hit  					// 1
-	gusano_waiting_above = 2, 	// 2
-   	gusano_hiding,				// 3
-   	gusano_going_to_hero,  		// 4
-   	gusano_emerging  			// 5*/
 	switch(enemies[update_index].state)
 	{
 		case enemy_walking: case gusano_waiting_above: case gusano_hiding: case gusano_emerging:
@@ -455,45 +450,3 @@ void chase_hero(u8 *enemy){
 
 	update_animation_enemy(enemy);
 }
-
-/*void shot_hero(u8 *enemy){
-
-	if(hero.x < (*enemy))
-	{
-		if((*(enemy+1))+ENTITY_HEIGHT > hero.y && hero.y+ENTITY_HEIGHT > (*(enemy+1)))
-		{
-		
-		}
-
-		entity_perform_movement(enemy, right, 0);
-		(*(enemy+2)) = left;
-	}
-	else if(hero.x > (*enemy))
-	{
-		if((*(enemy+1))+ENTITY_HEIGHT > hero.y && hero.y+ENTITY_HEIGHT > (*(enemy+1)))
-		{
-		
-		}
-		(*(enemy+2)) = right;
-		entity_perform_movement(enemy, left, 0);
-	}
-	
-	if(hero.y < (*(enemy+1)))
-	{	
-		if((*enemy)+ENTITY_WIDTH > hero.x && hero.x+ENTITY_WIDTH > (*enemy))
-		{
-		
-		}
-		(*(enemy+2)) = up;
-		entity_perform_movement(enemy, down, 0);		
-	}
-	else if(hero.y > (*(enemy+1)))
-	{	
-		if((*enemy)+ENTITY_WIDTH > hero.x && hero.x+ENTITY_WIDTH > (*enemy))
-		{
-		
-		}
-		(*(enemy+2)) = down;
-		entity_perform_movement(enemy, up, 0);
-	}
-}*/

@@ -71,3 +71,8 @@
 #include <sprites/blue_door.h>
 #include <sprites/white_door.h>
 
+//Princess
+#include <sprites/princess.h>
+
+//Logo
+#include <sprites/logo.h>

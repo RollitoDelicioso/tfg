@@ -20,10 +20,18 @@ typedef struct {
 	u8* external_portal;
 } TMap;
 
+typedef struct {
+	u8 id;
+	u8 x;
+	u8 y;
+} TCheckpoint;
+
 extern const u8 change_map;
 extern const u8 map[SCREEN_HEIGHT_T][SCREEN_WIDTH_T];
 extern const u8 next_maps[4];
 extern const TMap all_maps_compressed[];
+extern const TCheckpoint actual_checkpoint;
+extern const bool win;
 
 void map_init_game();
 inline void map_load_new_map();
@@ -34,5 +42,6 @@ inline u16 get_tile_horizontal_2(const u8, const u8);
 inline u16 get_tile_vertical_0(const u8, const u8);
 inline u16 get_tile_vertical_1(const u8, const u8);
 void map_change_map_by_portal(u8);
+void change_map_aux(u8 map_index);
 
 #endif

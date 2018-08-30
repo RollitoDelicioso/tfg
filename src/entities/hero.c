@@ -13,15 +13,15 @@
 #include "video/ui.h"
 
 
-const THero hero = {	.x = 		6*4,
-						.y = 		14*8 + 40,
+const THero hero = {	.x = 		7*4,
+						.y = 		15*8 + 40,
 						.ldf = 		1,
 						.pldf = 	1,
 						.sprite = 	sprite_hero_front_1,
 						.lives = 	8,
 						.state = 	hero_idle
 					};
-const u8 keys[4] = { 5,0,0,0 };
+const u8 keys[] = { 0,0,0,0 };
 
 u8 god_mode = 0;
 u8 aux_f = 0xFF;
@@ -41,6 +41,17 @@ void hero_increase_heal()
 	}
 }
 
+void hero_init()
+{
+	u8 *p_hero = &hero.lives;
+	(*p_hero) = 8;
+
+	p_hero = &hero.x;
+	(*p_hero++) = 7*4;
+	(*p_hero) = 15*8 + 40;
+
+
+}
 
 void hero_decrease_heal(u8 cuantity)
 {

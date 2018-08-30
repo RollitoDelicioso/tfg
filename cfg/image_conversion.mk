@@ -181,3 +181,15 @@ $(eval $(call IMG2SPRITES,img/Objects/Doors/red_door.png,0,sprite,8,16,$(PALETTE
 $(eval $(call IMG2SPRITES,img/Objects/Doors/blue_door.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
 
 #######################################################################################################
+
+## Princess
+
+$(eval $(call IMG2SPRITES,img/Princess/princess.png,0,sprite,8,16,$(PALETTE),mask,src/sprites,))
+
+#######################################################################################################
+
+## Logo
+
+$(eval $(call IMG2SPRITES,img/Logo/logo.png,0,sprite,40,20,$(PALETTE),mask,src/sprites,))
+
+#######################################################################################################

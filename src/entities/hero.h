@@ -33,6 +33,7 @@ void hero_decrease_heal(u8);
 void hero_add_key();
 void hero_increase_heal(); 
 bool hero_check_collision_door();
+void hero_init();
 extern const THero hero;
 extern u8 aux_f;
 

@@ -196,3 +196,148 @@ extern const struct TEnemyData enemies_map_38[];
 extern const struct TLocalPortalData portal_map_38;
 extern const struct TDoorData door_map_38;
 extern const struct TExternalPortalData external_portal_map_38;
+
+extern const struct TEnemyData enemies_map_39[];
+extern const struct TLocalPortalData portal_map_39;
+extern const struct TDoorData door_map_39;
+extern const struct TExternalPortalData external_portal_map_39;
+
+extern const struct TEnemyData enemies_map_40[];
+extern const struct TLocalPortalData portal_map_40;
+extern const struct TDoorData door_map_40;
+extern const struct TExternalPortalData external_portal_map_40;
+
+extern const struct TEnemyData enemies_map_41[];
+extern const struct TLocalPortalData portal_map_41;
+extern const struct TDoorData door_map_41;
+extern const struct TExternalPortalData external_portal_map_41;
+
+extern const struct TEnemyData enemies_map_42[];
+extern const struct TLocalPortalData portal_map_42;
+extern const struct TDoorData door_map_42;
+extern const struct TExternalPortalData external_portal_map_42;
+
+extern const struct TEnemyData enemies_map_43[];
+extern const struct TLocalPortalData portal_map_43;
+extern const struct TDoorData door_map_43;
+extern const struct TExternalPortalData external_portal_map_43;
+
+extern const struct TEnemyData enemies_map_44[];
+extern const struct TLocalPortalData portal_map_44;
+extern const struct TDoorData door_map_44;
+extern const struct TExternalPortalData external_portal_map_44;
+
+extern const struct TEnemyData enemies_map_45[];
+extern const struct TLocalPortalData portal_map_45;
+extern const struct TDoorData door_map_45;
+extern const struct TExternalPortalData external_portal_map_45;
+
+extern const struct TEnemyData enemies_map_46[];
+extern const struct TLocalPortalData portal_map_46;
+extern const struct TDoorData door_map_46;
+extern const struct TExternalPortalData external_portal_map_46;
+
+extern const struct TEnemyData enemies_map_47[];
+extern const struct TLocalPortalData portal_map_47;
+extern const struct TDoorData door_map_47;
+extern const struct TExternalPortalData external_portal_map_47;
+
+extern const struct TEnemyData enemies_map_48[];
+extern const struct TLocalPortalData portal_map_48;
+extern const struct TDoorData door_map_48;
+extern const struct TExternalPortalData external_portal_map_48;
+
+extern const struct TEnemyData enemies_map_49[];
+extern const struct TLocalPortalData portal_map_49;
+extern const struct TDoorData door_map_49;
+extern const struct TExternalPortalData external_portal_map_49;
+
+extern const struct TEnemyData enemies_map_50[];
+extern const struct TLocalPortalData portal_map_50;
+extern const struct TDoorData door_map_50;
+extern const struct TExternalPortalData external_portal_map_50;
+
+extern const struct TEnemyData enemies_map_51[];
+extern const struct TLocalPortalData portal_map_51;
+extern const struct TDoorData door_map_51;
+extern const struct TExternalPortalData external_portal_map_51;
+
+extern const struct TEnemyData enemies_map_52[];
+extern const struct TLocalPortalData portal_map_52;
+extern const struct TDoorData door_map_52;
+extern const struct TExternalPortalData external_portal_map_52;
+
+extern const struct TEnemyData enemies_map_53[];
+extern const struct TLocalPortalData portal_map_53;
+extern const struct TDoorData door_map_53;
+extern const struct TExternalPortalData external_portal_map_53;
+
+extern const struct TEnemyData enemies_map_54[];
+extern const struct TLocalPortalData portal_map_54;
+extern const struct TDoorData door_map_54;
+extern const struct TExternalPortalData external_portal_map_54;
+
+extern const struct TEnemyData enemies_map_55[];
+extern const struct TLocalPortalData portal_map_55;
+extern const struct TDoorData door_map_55;
+extern const struct TExternalPortalData external_portal_map_55;
+
+extern const struct TEnemyData enemies_map_56[];
+extern const struct TLocalPortalData portal_map_56;
+extern const struct TDoorData door_map_56;
+extern const struct TExternalPortalData external_portal_map_56;
+
+extern const struct TEnemyData enemies_map_57[];
+extern const struct TLocalPortalData portal_map_57;
+extern const struct TDoorData door_map_57;
+extern const struct TExternalPortalData external_portal_map_57;
+
+extern const struct TEnemyData enemies_map_58[];
+extern const struct TLocalPortalData portal_map_58;
+extern const struct TDoorData door_map_58;
+extern const struct TExternalPortalData external_portal_map_58;
+
+extern const struct TEnemyData enemies_map_59[];
+extern const struct TLocalPortalData portal_map_59;
+extern const struct TDoorData door_map_59;
+extern const struct TExternalPortalData external_portal_map_59;
+
+extern const struct TEnemyData enemies_map_60[];
+extern const struct TLocalPortalData portal_map_60;
+extern const struct TDoorData door_map_60;
+extern const struct TExternalPortalData external_portal_map_60;
+
+extern const struct TEnemyData enemies_map_61[];
+extern const struct TLocalPortalData portal_map_61;
+extern const struct TDoorData door_map_61;
+extern const struct TExternalPortalData external_portal_map_61;
+
+extern const struct TEnemyData enemies_map_62[];
+extern const struct TLocalPortalData portal_map_62;
+extern const struct TDoorData door_map_62;
+extern const struct TExternalPortalData external_portal_map_62;
+
+extern const struct TEnemyData enemies_map_63[];
+extern const struct TLocalPortalData portal_map_63;
+extern const struct TDoorData door_map_63;
+extern const struct TExternalPortalData external_portal_map_63;
+
+extern const struct TEnemyData enemies_map_64[];
+extern const struct TLocalPortalData portal_map_64;
+extern const struct TDoorData door_map_64;
+extern const struct TExternalPortalData external_portal_map_64;
+
+extern const struct TEnemyData enemies_map_65[];
+extern const struct TLocalPortalData portal_map_65;
+extern const struct TDoorData door_map_65;
+extern const struct TExternalPortalData external_portal_map_65;
+
+extern const struct TEnemyData enemies_map_66[];
+extern const struct TLocalPortalData portal_map_66;
+extern const struct TDoorData door_map_66;
+extern const struct TExternalPortalData external_portal_map_66;
+
+extern const struct TEnemyData enemies_map_67[];
+extern const struct TLocalPortalData portal_map_67;
+extern const struct TDoorData door_map_67;
+extern const struct TExternalPortalData external_portal_map_67;

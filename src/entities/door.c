@@ -6,7 +6,7 @@
 
 const TDoor door = INIT_DOOR;
 const u8** const door_sprites[4] = {sprite_white_door,sprite_red_door,sprite_green_door,sprite_blue_door};
-const u8 doors_closed[5] = {1,1,1,1,1}; 
+const u8 doors_closed[] = {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
 
 void door_open_door()
 {

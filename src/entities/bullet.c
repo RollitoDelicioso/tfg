@@ -52,7 +52,7 @@ void bullet_collision_with_enemies(u8 index)
 {
 	for(u8 i = 0; i < MAX_ENEMIES; ++i)
 	{
-		if(entity_x_collision(bullets[index].x,BULLET_WIDTH,enemies[i].x,ENTITY_WIDTH) && entity_y_collision(bullets[index].y,BULLET_HEIGHT,enemies[i].y,ENTITY_HEIGHT))
+		if(enemies[i].lives > 0 && entity_x_collision(bullets[index].x,BULLET_WIDTH,enemies[i].x,ENTITY_WIDTH) && entity_y_collision(bullets[index].y,BULLET_HEIGHT,enemies[i].y,ENTITY_HEIGHT))
 		{
 			enemy_decrease_heal(i);
 			delete_bullet(index);
